@@ -1,0 +1,18 @@
+{
+  "name": "urza",
+  "version": "1.0.0",
+  "description": "Minimal App Framework",
+  "main": "urza.js",
+  "dependencies": {
+    "gulp-concat": "^2.6.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" href="app.min.css">
+       <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+                integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+                crossorigin="anonymous"></script>
+        <style>
+         /* TODO */
+        </style>
+    </head>
+
+    <body>
+
+        <div> hey </div>
+        <div class="app-page" data-page="home">
+            <div class="app-topbar">
+                <div class="app-title">Home page</div>
+            </div>
+            <div class="app-content">
+                <div class="app-section">
+                    <div class="app-button" data-target="page2">Go to Page 2</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-page" data-page="page2">
+            <div class="app-topbar">
+                <div class="app-button left" data-back data-autotitle></div>
+                <div class="app-title">Page 2</div>
+            </div>
+            <div class="app-content">
+                Page 2 is lonely
+            </div>
+        </div>
+
+
+
+        <script src="urza.js"></script>
+        <script>
+         var app = new Urza()
+         app.addModule('core',App)
+         app.addModule('pageManager',{ classDef: UrPageManager})
+         app.pageManager.init({core: App})
+         app.pageManager.load("home")
+         /* App.controller('home', function (page) {
+          *     // put stuff here
+          * });
+
+          * App.controller('page2', function (page) {
+          *     // put stuff here
+          * });
+
+          * try {
+          *     App.restore();
+          * } catch (err) {
+          *     App.load('home');
+          * }*/
+        </script>
+    </body>
+</html>
